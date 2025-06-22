@@ -1,5 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
+
 import './index.css'
 /* import { CounterApp } from './01-useState/CounterApp' */
 /* import { HooksApp } from './HooksApp'; */
@@ -12,7 +14,14 @@ import './index.css'
 /* import { Memorize } from './06-memos/Memorize'; */
 /* import { MemoHook } from './06-memos/MemoHook'; */
 /* import { CallBackHook } from './06-memos/CallBackHook'; */
-import { Padre } from './07-tarea-memo/Padre';
+/* import { Padre } from './07-tarea-memo/Padre'; */
+
+/* import './08-useReducer/intro-reducer'; */
+/* import { TodoApp } from './08-useReducer/TodoApp'; */
+
+import { getRoutes } from './Routes';
+
+const router = getRoutes();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -27,6 +36,8 @@ createRoot(document.getElementById('root')).render(
     {/* <Memorize /> */}
     {/* <MemoHook /> */}
     {/* <CallBackHook /> */}
-    <Padre />
+    {/* <Padre /> */}
+    {/* <TodoApp /> */}
+    <RouterProvider router={router}/>
   </StrictMode>
 )
