@@ -69,6 +69,7 @@ export const startSaveNote = () => {
          
         const docRef = doc( fireBaseDb, `${uid}/journal/notes/${note.id}` );
         await setDoc( docRef, noteToFireStore );
+        
 
     }
 
